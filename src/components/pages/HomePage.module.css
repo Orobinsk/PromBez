@@ -1,0 +1,8 @@
+.LayoutContainer{
+    margin: 20px;
+}
+.sideCards{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+}

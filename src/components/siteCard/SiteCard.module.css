@@ -1,0 +1,16 @@
+.img_label{
+    height: 100px;
+    width: 100px;
+
+}
+.card{
+    background: #E0F7FA;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.card:hover{
+    background: #bbdefb;
+}
+

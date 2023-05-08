@@ -1,0 +1,5 @@
+export const LOGIN_ROUTE = '/login'
+export const TEST_ROUTE = '/test'
+export const HOME_ROUTE = '/'
+export const SECTION_A_ROUTE = '/sectionA'
+export const LEARN_ROUTE = '/learn'
