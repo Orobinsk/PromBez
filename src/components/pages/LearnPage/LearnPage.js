@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-  import questions from "../../../data/QuestionsA1";
 import classes from "../TestPage.module.css";
 import Button from "../../UI/button/Button";
 import QuestionContainer from "./QuestionContainer";
+import {useSelector} from "react-redux";
 
 
 const LearnPage = () => {
@@ -12,7 +12,7 @@ const LearnPage = () => {
         const [showResult, setShowResult] = useState(false)
         const [help, setHelp] = useState(false)
         const [notAnswered, setNotAnswered] = useState([])
-console.log(questions)
+        const questions = useSelector(state => state.questions)
 
         useEffect(() => {
             let x = []
@@ -54,7 +54,7 @@ console.log(questions)
             }
         }
 
-        const handleAnswerClick = (index, e) => {
+        const handleAnswerClick = (index) => {
             setValue(index)
         }
 

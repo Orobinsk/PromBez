@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import {SECTION_A_ROUTE, TEST_ROUTE} from "../../utils/consts";
+import React from 'react';
+import {SECTION_A_ROUTE, SECTION_B1_ROUTE, TEST_ROUTE} from "../../utils/consts";
 import imgA1_Background from '../../data/img/A1_background.jpeg'
 import SiteCard from "../siteCard/SiteCard";
 import classes from "./HomePage.module.css"
 
 const HomePage = () => {
 
-    const[value,setValue]=useState()
 
     return (
         <div className={classes.LayoutContainer}>
@@ -17,24 +16,25 @@ const HomePage = () => {
             </ul>
             <div className={classes.sideCards}>
                 <SiteCard
+                    // ЗАМЕНИТЬ НА ДРУГИЕ карточки
                     route={SECTION_A_ROUTE}
-                    cardName={'А.1. Основы промышленной безопасности. Вопросы с ответами (тесты) 2023 год.'}
+                    cardName={'А.1. Основы промышленной безопасности'}
                     img={imgA1_Background}
+                />
+                <SiteCard
+                    route={SECTION_B1_ROUTE}
+                    img={imgA1_Background}
+                    cardName={'Б.1 Требования промышленной безопасности в химической, нефтехимической и нефтеперерабатывающей промышленности'}
                 />
                 <SiteCard
                     route={TEST_ROUTE}
                     img={imgA1_Background}
-                    cardName={'Б. Основы промышленной безопасности. Вопросы с ответами (тесты) 2023 год.'}
+                    cardName={'Б.2. Требования промышленной безопасности в нефтяной и газовой промышленности'}
                 />
                 <SiteCard
                     route={TEST_ROUTE}
                     img={imgA1_Background}
-                    cardName={'Б2. Основы промышленной безопасности. Вопросы с ответами (тесты) 2023 год.'}
-                />
-                <SiteCard
-                    route={TEST_ROUTE}
-                    img={imgA1_Background}
-                    cardName={'Б3. Основы промышленной безопасности. Вопросы с ответами (тесты) 2023 год.'}
+                    cardName={'Б.3. Требования промышленной безопасности в металлургической промышленности'}
                 />
             </div>
 

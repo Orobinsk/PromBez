@@ -1,19 +1,20 @@
-import React, {useEffect, useRef, useState} from 'react';
-import classes from './TestPage.module.css'
-import QuestionsA1 from "../../data/QuestionsA1";
-import questions from "../../data/QuestionsA1";
+import React, {useState} from 'react';
+import classes from './TestPage.module.css';
 import Button from "../UI/button/Button";
+import {useSelector} from "react-redux";
 
 const TestPage = () => {
     const [value, setValue] = useState('')
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [showResult, setShowResult] = useState(false)
+    const questions = useSelector(state => state.questions)
+
 
     const handleNextQuestionClick = event => {
         console.log(score)
         event.preventDefault()
-        if (value === QuestionsA1[currentQuestion].isCorrect) {
+        if (value === questions[currentQuestion].isCorrect) {
             setScore(score + 1)
         }
         setValue('')
@@ -29,7 +30,7 @@ const TestPage = () => {
     }
 
 
-    const handleAnswerClick = (index, e) => {
+    const handleAnswerClick = (index) => {
         setValue(index)
     }
 
@@ -50,9 +51,9 @@ const TestPage = () => {
             :
             <div className={classes.container}>
                 <h1>Timer 10 min</h1>
-                <h3 id="quiz-label">{QuestionsA1[currentQuestion].questionsText}</h3>
+                <h3 id="quiz-label">{questions[currentQuestion].questionsText}</h3>
                 <ul className={classes.answers}>
-                    {QuestionsA1[currentQuestion].answerOptions.map((item, index) => (
+                    {questions[currentQuestion].answerOptions.map((item, index) => (
                         <li key={Math.random()}>
                             <label onClick={e => handleAnswerClick(index, e)}>
                                 <input

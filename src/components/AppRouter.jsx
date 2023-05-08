@@ -2,10 +2,11 @@ import React from 'react';
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import {privateRoutes, publicRoutes} from "../routes";
 import Navbar from "./Navbar";
-import {HOME_ROUTE, LOGIN_ROUTE, TEST_ROUTE} from "../utils/consts";
+import {HOME_ROUTE, LOGIN_ROUTE} from "../utils/consts";
 
 const AppRouter = () => {
     const isAuth = true
+
     return (
         <BrowserRouter >
             <Navbar/>

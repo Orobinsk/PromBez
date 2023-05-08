@@ -6,12 +6,11 @@ import {useDispatch} from "react-redux";
 
 
 
-const SectionA = () => {
+const SectionB1 = () => {
      const dispatch = useDispatch()
      const questionsSelect=()=> {
-          dispatch({type:"A1"})
+          dispatch({type:"B1_1"})
      }
-
     return (
         <div>
             <SiteCard
@@ -28,4 +27,4 @@ const SectionA = () => {
     );
 };
 
-export default SectionA;
+export default SectionB1;
