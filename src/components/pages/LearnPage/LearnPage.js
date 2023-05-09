@@ -67,12 +67,12 @@ const LearnPage = () => {
         return (
             (showResult
                 ?
-                <div className={classes.container}>
+                <div className={classes.LayoutContainer}>
                     <h3>{rightAnswers.length}/{questions.length}</h3>
                     <Button onClick={handleReset}>Reset</Button>
                 </div>
                 :
-                <div className={classes.container}>
+                <div className={classes.LayoutContainer}>
                     <li className={classes.questionsList}>
                         {questions.map((i, index) => (
                             <Button onClick={() => setCurrentQuestion(index)} key={index}>{index + 1}</Button>

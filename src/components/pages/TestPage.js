@@ -44,12 +44,12 @@ const TestPage = () => {
     return (
         (showResult
             ?
-            <div className={classes.container}>
+            <div className={classes.LayoutContainer}>
                 <h3>{score}/{questions.length}</h3>
                 <Button onClick={handleResetTest}>Reset</Button>
             </div>
             :
-            <div className={classes.container}>
+            <div className={classes.LayoutContainer}>
                 <h1>Timer 10 min</h1>
                 <h3 id="quiz-label">{questions[currentQuestion].questionsText}</h3>
                 <ul className={classes.answers}>

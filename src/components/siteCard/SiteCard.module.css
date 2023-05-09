@@ -4,13 +4,13 @@
 
 }
 .card{
-    background: #E0F7FA;
+    background: #B2DFDB;
     cursor: pointer;
     border-radius: 5px;
     display: flex;
     align-items: center;
 }
 .card:hover{
-    background: #bbdefb;
+    background: #607D8B;
 }
 

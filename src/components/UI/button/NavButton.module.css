@@ -1,0 +1,16 @@
+.NavBtn{
+    padding:10px 20px;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+a{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+.NavBtn:hover{
+    background: #009688;
+}
