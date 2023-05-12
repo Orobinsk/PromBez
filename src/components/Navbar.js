@@ -8,11 +8,11 @@ const Navbar = () => {
     return (
         <div className={classes.wrapper}>
             <div className={classes.LayoutContainer}>
-                <NavButton ><Link to={HOME_ROUTE}>Промышлення безопасность</Link></NavButton>
+                <Link to={HOME_ROUTE}><NavButton style={{fontSize: '26px'}}>Промышлення безопасность</NavButton></Link>
                 <div className={classes.spaceBetween}></div>
-                <NavButton ><Link to={LOGIN_ROUTE}>Экзамен</Link></NavButton>
-                <NavButton ><Link to={LOGIN_ROUTE}>Поиск</Link></NavButton>
-                <NavButton ><Link to={LOGIN_ROUTE}>Войти</Link></NavButton>
+                <Link to={LOGIN_ROUTE}><NavButton>Экзамен</NavButton></Link>
+                <Link to={LOGIN_ROUTE}><NavButton>Поиск</NavButton></Link>
+                <Link to={LOGIN_ROUTE}><NavButton>Войти</NavButton></Link>
             </div>
         </div>
     );

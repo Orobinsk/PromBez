@@ -1,15 +1,15 @@
 .MyBtn{
     padding: 5px 15px;
     font-size: 14px;
-    background: #E0F7FA;
     cursor: pointer;
     border-radius: 5px;
     border: none;
+    background: #B2DFDB;
 }
 a{
     text-decoration:none;
-    color: black;
+    color: #FFFFFF;
 }
 .MyBtn:hover{
-    background: #bbdefb;
+    background: #607D8B;
 }

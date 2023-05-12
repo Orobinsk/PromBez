@@ -1,11 +1,13 @@
 import React from 'react';
-import {SECTION_A_ROUTE, SECTION_B1_ROUTE, TEST_ROUTE} from "../../utils/consts";
-import imgA1_Background from '../../data/img/A1_background.jpeg'
+import {SECTION_ROUTE, SECTION_B1_ROUTE, TEST_ROUTE} from "../../utils/consts";
 import SiteCard from "../siteCard/SiteCard";
-import classes from "./HomePage.module.css"
+import classes from "./Page.module.css"
+import {useDispatch} from "react-redux";
+import {IconA1, IconB1, IconB2, IconB3} from "../UI/SiteCardIcon/SiteCardIcons";
 
 const HomePage = () => {
 
+    const dispatch = useDispatch()
 
     return (
         <div className={classes.LayoutContainer}>
@@ -16,26 +18,31 @@ const HomePage = () => {
             </ul>
             <div className={classes.sideCards}>
                 <SiteCard
-                    // ЗАМЕНИТЬ НА ДРУГИЕ карточки
-                    route={SECTION_A_ROUTE}
+                    route={SECTION_ROUTE}
                     cardName={'А.1. Основы промышленной безопасности'}
-                    img={imgA1_Background}
-                />
+                    section={() => dispatch({type: "A1"})}
+                >
+                    {IconA1}
+                </SiteCard>
                 <SiteCard
-                    route={SECTION_B1_ROUTE}
-                    img={imgA1_Background}
+                    route={SECTION_ROUTE}
                     cardName={'Б.1 Требования промышленной безопасности в химической, нефтехимической и нефтеперерабатывающей промышленности'}
-                />
+                    section={() => dispatch({type: "B1"})}
+                >
+                    {IconB1}
+                </SiteCard>
                 <SiteCard
-                    route={TEST_ROUTE}
-                    img={imgA1_Background}
+                    route={SECTION_ROUTE}
                     cardName={'Б.2. Требования промышленной безопасности в нефтяной и газовой промышленности'}
-                />
+                >
+                    {IconB2}
+                </SiteCard>
                 <SiteCard
-                    route={TEST_ROUTE}
-                    img={imgA1_Background}
+                    route={SECTION_ROUTE}
                     cardName={'Б.3. Требования промышленной безопасности в металлургической промышленности'}
-                />
+                >
+                    {IconB3}
+                </SiteCard>
             </div>
         </div>
     );

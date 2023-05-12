@@ -9,8 +9,14 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 5px;
 }
 .card:hover{
     background: #607D8B;
 }
+.icons{
+    margin: 5px;
+}
+
 

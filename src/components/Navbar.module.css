@@ -11,7 +11,9 @@
     align-items: center;
     height: 100%;
 }
-
+.homeBtn{
+    font-size: 30px;
+}
 .spaceBetween{
     flex-grow: 1;
 }

@@ -34,7 +34,7 @@ const TestPage = () => {
         setValue(index)
     }
 
-    const handleResetTest = () => {
+    const handleReset = () => {
         setScore(0)
         setCurrentQuestion(0)
         setShowResult(false)
@@ -46,7 +46,7 @@ const TestPage = () => {
             ?
             <div className={classes.LayoutContainer}>
                 <h3>{score}/{questions.length}</h3>
-                <Button onClick={handleResetTest}>Reset</Button>
+                <Button onClick={handleReset}>Reset</Button>
             </div>
             :
             <div className={classes.LayoutContainer}>
