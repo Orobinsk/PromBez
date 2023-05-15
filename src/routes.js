@@ -9,7 +9,7 @@ export const publicRoutes = [
     {path: TEST_ROUTE, element: <TestPage/>},
     {path: HOME_ROUTE, element: <HomePage/>},
     {path: LOGIN_ROUTE, element: <Login/>},
-    {path: SECTION_ROUTE, element: <Sections/>},
+    {path: '/section/:type', element: <Sections/>},
     {path: LEARN_ROUTE, element: <LearnPage/>},
 ]
 

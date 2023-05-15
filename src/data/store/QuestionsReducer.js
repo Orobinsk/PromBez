@@ -17,12 +17,14 @@ const questionReducer = (state = defaultState, action) => {
                 questions: questionsA1,
                 mainSection: 'А.1. Основы промышленной безопасности',
                 sectionNames: SectionA1,
+                sectionType:'A1'
             }
         case 'B1':
             return {
                 questions: [...questionsB1_1, ...questionsB1_2],
                 mainSection: "Б.1 Требования промышленной безопасности в химической, нефтехимической и нефтеперерабатывающей промышленности",
                 sectionNames: SectionB1,
+                sectionType:'B1'
             }
         default: {
             return state
