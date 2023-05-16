@@ -13,6 +13,7 @@ const LearnPage = () => {
         const [help, setHelp] = useState(false)
         const [notAnswered, setNotAnswered] = useState([])
         const questions = useSelector(state => state.questions)
+
         useEffect(() => {
             let x = []
             questions.forEach((i, index) => {

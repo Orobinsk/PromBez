@@ -1,4 +1,4 @@
-import {HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE, SECTION_ROUTE, TEST_ROUTE} from "./utils/consts";
+import {HOME_ROUTE, LOGIN_ROUTE, TEST_ROUTE} from "./utils/consts";
 import Login from "./components/pages/Login";
 import TestPage from "./components/pages/TestPage";
 import HomePage from "./components/pages/HomePage";
@@ -10,7 +10,7 @@ export const publicRoutes = [
     {path: HOME_ROUTE, element: <HomePage/>},
     {path: LOGIN_ROUTE, element: <Login/>},
     {path: '/section/:type', element: <Sections/>},
-    {path: LEARN_ROUTE, element: <LearnPage/>},
+    {path: '/learn/:type', element: <LearnPage/>},
 ]
 
 export const privateRoutes = [

@@ -20,7 +20,7 @@ const navigate = useNavigate()
             <div className={classes.sideCards}>
                 <SiteCard
                     route={SECTION_ROUTE+'A1'}
-                    cardName={'А.1. Основы промышленной безопасности'}
+                    cardName={'A.1 Общие требования по промышленной безопасности'}
                     section={() => dispatch({type: "A1"})}
                 >
                     {IconA1}
