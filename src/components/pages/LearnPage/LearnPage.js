@@ -12,7 +12,7 @@ const LearnPage = () => {
         const [showResult, setShowResult] = useState(false)
         const [help, setHelp] = useState(false)
         const [notAnswered, setNotAnswered] = useState([])
-        const questions = useSelector(state => state.questions)
+        const {questions} = useSelector(state => state.sectionReducer)
 
         useEffect(() => {
             let x = []

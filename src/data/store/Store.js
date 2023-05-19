@@ -1,4 +1,12 @@
-import {createStore} from "redux";
-import questionsReducer from "./QuestionsReducer"
+import {combineReducers, configureStore} from "@reduxjs/toolkit"
+import sectionReducer from './QuestionsReducer'
 
-export const store = createStore(questionsReducer)
+const rootReducer = combineReducers({
+    sectionReducer
+})
+
+export const setupStore=()=>{
+    return configureStore({
+        reducer:rootReducer
+    })
+}

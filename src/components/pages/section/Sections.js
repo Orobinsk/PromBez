@@ -4,21 +4,22 @@ import SiteCard from "../../siteCard/SiteCard";
 import {useDispatch, useSelector} from "react-redux";
 import classes from "../Page.module.css";
 import {useParams} from "react-router-dom";
+import {setSection} from "../../../data/store/QuestionsReducer";
 
 
 const Sections = () => {
-    const state = useSelector(state => state)
+
+    const {mainSectionName, mainSectionType,sections} =useSelector(state=>state.sectionReducer)
     const dispatch = useDispatch()
     const params = useParams()
 
-
-        if (state.type !== params.type) {
-        dispatch({type: params.type})
+        if (mainSectionType !== params.type) {
+        dispatch(setSection(params.type))
         } else
 
     return (
         <div className={classes.LayoutContainer}>
-            <h1>{state.section.mainSectionName}</h1>
+            <h1>{mainSectionName}</h1>
             <div className={classes.sideCards}>
                 <SiteCard
                     route={TEST_ROUTE}
@@ -28,12 +29,12 @@ const Sections = () => {
                     route={LEARN_ROUTE}
                     cardName={'Обучение'}
                 />
-                {state.section.sections.map((section, index) => (
+                {sections.map((section, index) => (
                     <SiteCard
                         key={index}
                         route={LEARN_ROUTE+section.sectionType}
                         cardName={section.name}
-                        section={() => dispatch({type: section.sectionType})}
+                        section={() => dispatch(setSection(section.sectionType))}
                     />
                  ))}
             </div>
