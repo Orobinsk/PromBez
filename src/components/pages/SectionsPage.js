@@ -1,13 +1,13 @@
 import React from 'react';
-import {LEARN_ROUTE, TEST_ROUTE} from "../../../utils/consts";
-import SiteCard from "../../siteCard/SiteCard";
+import {LEARN_ROUTE, TEST_ROUTE} from "../../utils/consts";
+import SiteCard from "../UI/siteCard/SiteCard";
 import {useDispatch, useSelector} from "react-redux";
-import classes from "../Page.module.css";
+import classes from "./Page.module.css";
 import {useParams} from "react-router-dom";
-import {setSection} from "../../../data/store/QuestionsReducer";
+import {setSection} from "../../data/store/QuestionsReducer";
 
 
-const Sections = () => {
+const SectionsPage = () => {
 
     const {mainSectionName, mainSectionType,sections} =useSelector(state=>state.sectionReducer)
     const dispatch = useDispatch()
@@ -21,14 +21,14 @@ const Sections = () => {
         <div className={classes.LayoutContainer}>
             <h1>{mainSectionName}</h1>
             <div className={classes.sideCards}>
-                <SiteCard
-                    route={TEST_ROUTE}
-                    cardName={'Тест'}
-                />
-                <SiteCard
-                    route={LEARN_ROUTE}
-                    cardName={'Обучение'}
-                />
+                {/*<SiteCard*/}
+                {/*    route={TEST_ROUTE}*/}
+                {/*    cardName={'Тест'}*/}
+                {/*/>*/}
+                {/*<SiteCard*/}
+                {/*    route={LEARN_ROUTE}*/}
+                {/*    cardName={'Обучение'}*/}
+                {/*/>*/}
                 {sections.map((section, index) => (
                     <SiteCard
                         key={index}
@@ -42,4 +42,4 @@ const Sections = () => {
     );
 };
 
-export default Sections;
+export default SectionsPage;

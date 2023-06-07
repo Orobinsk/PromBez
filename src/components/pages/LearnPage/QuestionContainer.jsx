@@ -29,10 +29,11 @@ const QuestionContainer = (
                         </label>
                     </li>
                 ))}
+            </ul>
+            <div style={{display:'flex', alignItems: "center", justifyContent: 'center'}}>
                 <Button type='submit' onClick={skip}>Пропустить</Button>
                 <Button type='submit' onClick={submit}>Ответить</Button>
-                <Button onClick={() => setHelp(true)}>Узнать ответ</Button>
-            </ul>
+                <Button onClick={() => setHelp(true)}>Узнать ответ</Button></div>
             <div>
                 {help && <h4>{questions[currentQuestion].comment}</h4>}
             </div>

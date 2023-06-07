@@ -1,6 +1,6 @@
 import React from 'react';
 import {SECTION_ROUTE} from "../../utils/consts";
-import SiteCard from "../siteCard/SiteCard";
+import SiteCard from "../UI/siteCard/SiteCard";
 import classes from "./Page.module.css"
 import {useDispatch} from "react-redux";
 import {IconA1, IconB1, IconB2, IconB3} from "../UI/SiteCardIcon/SiteCardIcons";

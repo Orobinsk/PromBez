@@ -1,8 +1,9 @@
-.wrapper{
+.wrapper {
     background-color: #00796B;
     height: 70px;
 }
-.LayoutContainer{
+
+.menu {
     padding: 0 30px;
     width: 1136px;
     margin: auto;
@@ -10,16 +11,90 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    z-index: 2;
 }
-.homeBtn{
+
+.homeBtn {
     font-size: 30px;
 }
-.spaceBetween{
+
+.spaceBetween {
     flex-grow: 1;
 }
 
-@media screen and (max-width:1024px){
-    .LayoutContainer{
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.burgerBtn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    margin:0 30px;
+}
+
+.burgerBtn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px;
+    background-color: #FFFFFF;
+    height: 3px;
+}
+
+.burgerBtn span {
+    position: absolute;
+    top: 14px;
+    width: 30px;
+    background-color: #FFFFFF;
+    height: 3px;
+}
+
+.burgerBtn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    background-color: #FFFFFF;
+    height: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
         width: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .wrapper {
+        background-color: #00796B;
+        height: 100%;
+    }
+
+    .list {
+        display: none;
+        transform: translateY(-100%);
+        transition: all 3s;
+    }
+
+    .listActive {
+        display: inline;
+        transform: translateY(0%);
+        transition: 3s;
+    }
+
+    .burgerBtn {
+        display: block;
     }
 }

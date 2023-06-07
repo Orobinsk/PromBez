@@ -3,6 +3,7 @@ import classes from "../TestPage.module.css";
 import Button from "../../UI/button/Button";
 import QuestionContainer from "./QuestionContainer";
 import {useSelector} from "react-redux";
+import QuestionsNav from "./QuestionsNav";
 
 
 const LearnPage = () => {
@@ -37,6 +38,7 @@ const LearnPage = () => {
         }
 
         const handleSkipQuestion = event => {
+             console.log(notAnswered,rightAnswers)
             setValue('')
             setHelp(false)
             for (let nextQuestion = currentQuestion + 1; nextQuestion <= questions.length; nextQuestion++) {
@@ -63,6 +65,9 @@ const LearnPage = () => {
             setShowResult(false)
             setRightAnswers([])
         }
+        const handleQuestionNav=(index)=>{
+            setCurrentQuestion(index)
+        }
 
         return (
             (showResult
@@ -73,11 +78,12 @@ const LearnPage = () => {
                 </div>
                 :
                 <div className={classes.LayoutContainer}>
-                    <li className={classes.questionsList}>
-                        {questions.map((i, index) => (
-                            <Button onClick={() => setCurrentQuestion(index)} key={index}>{index + 1}</Button>
-                        ))}
-                    </li>
+                    <QuestionsNav
+                        rightAnswers={rightAnswers}
+                        questions={questions}
+                        notAnswered={notAnswered}
+                        handleQuestion={handleQuestionNav}
+                    />
                     <QuestionContainer
                         questions={questions}
                         currentQuestion={currentQuestion}
