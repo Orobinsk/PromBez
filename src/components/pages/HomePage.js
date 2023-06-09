@@ -40,8 +40,9 @@ const HomePage = () => {
                     {IconB2}
                 </SiteCard>
                 <SiteCard
-                    route={SECTION_ROUTE}
+                    route={SECTION_ROUTE+"B3"}
                     cardName={'Б.3. Требования промышленной безопасности в металлургической промышленности'}
+                    section={() => dispatch(setSection("B3"))}
                 >
                     {IconB3}
                 </SiteCard>

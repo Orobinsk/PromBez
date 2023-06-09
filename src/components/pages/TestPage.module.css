@@ -1,6 +1,5 @@
 .LayoutContainer {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 30px;
@@ -9,8 +8,6 @@
 }
 .answers {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -20,6 +17,7 @@
 
 .questionsList{
 display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width:1024px){

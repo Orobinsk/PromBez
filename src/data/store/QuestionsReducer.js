@@ -2,6 +2,8 @@ import questionsA1 from "../questions/QuestionsA1";
 import questionsB1_1 from "../questions/QuestionsB1_1";
 import questionsB1_2 from "../questions/QuestionsB1_2";
 import {createSlice} from "@reduxjs/toolkit";
+import questionsB2_1 from "../questions/QuestionsB2_1";
+import questionsB3_1 from "../questions/QuestionsB3_1";
 
 const initialState = {
     mainSectionName: 'Общие требования по промышленной безопасности',
@@ -70,6 +72,50 @@ const sectionSlice = createSlice({
                         },
                     ]
                     state.questions = questionsB1_2
+                    break
+                case 'B2':
+                    state.mainSectionName = 'Б.2. Требования промышленной безопасности в нефтяной и газовой промышленности'
+                    state.mainSectionType = 'B2'
+                    state.sections = [
+                        {
+                            name: 'Б.2.1. Эксплуатация объектов нефтяной и газовой промышленности',
+                            sectionType: 'B2_1',
+                        },
+                    ]
+                    state.questions = questionsB2_1
+                    break
+                case 'B2_1':
+                    state.mainSectionName = 'Б.2. Требования промышленной безопасности в нефтяной и газовой промышленности'
+                    state.mainSectionType = 'B2_1'
+                    state.sections = [
+                        {
+                            name: 'Б.2.1. Эксплуатация объектов нефтяной и газовой промышленности',
+                            sectionType: 'B2_1',
+                        },
+                    ]
+                    state.questions = questionsB2_1
+                    break
+                case 'B3':
+                    state.mainSectionName = 'Б.3. Требования промышленной безопасности в металлургической промышленности'
+                    state.mainSectionType = 'B3'
+                    state.sections = [
+                        {
+                            name: 'Б.3.1. Литейное производство черных и цветных металлов',
+                            sectionType: 'B3_1',
+                        },
+                    ]
+                    state.questions = questionsB3_1
+                    break
+                case 'B3_1':
+                    state.mainSectionName = 'Б.3. Требования промышленной безопасности в металлургической промышленности'
+                    state.mainSectionType = 'B3_1'
+                    state.sections = [
+                        {
+                            name: 'Б.3.1. Литейное производство черных и цветных металлов',
+                            sectionType: 'B3_1',
+                        },
+                    ]
+                    state.questions = questionsB3_1
                     break
                 default: {
                     return state
